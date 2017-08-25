@@ -26,6 +26,9 @@
 (defroute "/" ()
   (render #P"index.html"))
 
+(defroute "/test/*" (&key splat)
+  (format nil "We saw this in the URL: ~a" (car splat)))
+
 ;;
 ;; Error pages
 
