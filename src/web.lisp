@@ -26,8 +26,10 @@
 (defroute "/" ()
   (render #P"index.html"))
 
-(defroute "/test/*" (&key splat)
-  (format nil "We saw this in the URL: ~a" (car splat)))
+(defroute ("/mult" :method :post) (&key |number|)
+  (let* ((multiplied (* 2 (parse-integer |number|)))
+         (resp  `(,multiplied)))
+    (render-json resp)))
 
 ;;
 ;; Error pages

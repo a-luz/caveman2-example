@@ -13,7 +13,6 @@
                :envy
                :cl-ppcre
                :uiop
-
                ;; for @route annotation
                :cl-syntax-annot
 
@@ -22,7 +21,12 @@
 
                ;; for DB
                :datafly
-               :sxql)
+               :sxql
+               ;; for other tasks
+               :drakma
+               :cl-json
+               :split-sequence
+               :md5)
   :components ((:module "src"
                 :components
                 ((:file "main" :depends-on ("config" "view" "db"))
