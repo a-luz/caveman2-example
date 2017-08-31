@@ -1,5 +1,5 @@
 (in-package :cl-user)
-(defpackage estudo-cave.config
+(defpackage caveman2-example.config
   (:use :cl)
   (:import-from :envy
                 :config-env-var
@@ -11,11 +11,11 @@
            :appenv
            :developmentp
            :productionp))
-(in-package :estudo-cave.config)
+(in-package :caveman2-example.config)
 
 (setf (config-env-var) "APP_ENV")
 
-(defparameter *application-root*   (asdf:system-source-directory :estudo-cave))
+(defparameter *application-root*   (asdf:system-source-directory :caveman2-example))
 (defparameter *static-directory*   (merge-pathnames #P"static/" *application-root*))
 (defparameter *template-directory* (merge-pathnames #P"templates/" *application-root*))
 

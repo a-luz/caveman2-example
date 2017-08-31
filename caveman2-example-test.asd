@@ -1,14 +1,14 @@
 (in-package :cl-user)
-(defpackage estudo-cave-test-asd
+(defpackage caveman2-example-test-asd
   (:use :cl :asdf))
-(in-package :estudo-cave-test-asd)
+(in-package :caveman2-example-test-asd)
 
-(defsystem estudo-cave-test
+(defsystem caveman2-example-test
   :author "Arthur Luz"
   :license ""
-  :depends-on (:estudo-cave
+  :depends-on (:caveman2-example
                :prove)
   :components ((:module "t"
                 :components
-                ((:file "estudo-cave"))))
+                ((:file "caveman2-example"))))
   :perform (load-op :after (op c) (asdf:clear-system c)))

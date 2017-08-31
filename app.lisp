@@ -1,19 +1,19 @@
-(ql:quickload :estudo-cave)
+(ql:quickload :caveman2-example)
 
-(defpackage estudo-cave.app
+(defpackage caveman2-example.app
   (:use :cl)
   (:import-from :lack.builder
                 :builder)
   (:import-from :ppcre
                 :scan
                 :regex-replace)
-  (:import-from :estudo-cave.web
+  (:import-from :caveman2-example.web
                 :*web*)
-  (:import-from :estudo-cave.config
+  (:import-from :caveman2-example.config
                 :config
                 :productionp
                 :*static-directory*))
-(in-package :estudo-cave.app)
+(in-package :caveman2-example.app)
 
 (builder
  (:static

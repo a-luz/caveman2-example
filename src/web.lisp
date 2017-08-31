@@ -1,14 +1,14 @@
 (in-package :cl-user)
-(defpackage estudo-cave.web
+(defpackage caveman2-example.web
   (:use :cl
         :caveman2
-        :estudo-cave.config
-        :estudo-cave.view
-        :estudo-cave.db
+        :caveman2-example.config
+        :caveman2-example.view
+        :caveman2-example.db
         :datafly
         :sxql)
   (:export :*web*))
-(in-package :estudo-cave.web)
+(in-package :caveman2-example.web)
 
 ;; for @route annotation
 (syntax:use-syntax :annot)

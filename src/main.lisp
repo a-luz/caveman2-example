@@ -1,16 +1,16 @@
 (in-package :cl-user)
-(defpackage estudo-cave
+(defpackage caveman2-example
   (:use :cl)
-  (:import-from :estudo-cave.config
+  (:import-from :caveman2-example.config
                 :config)
   (:import-from :clack
                 :clackup)
   (:export :start
            :stop))
-(in-package :estudo-cave)
+(in-package :caveman2-example)
 
 (defvar *appfile-path*
-  (asdf:system-relative-pathname :estudo-cave #P"app.lisp"))
+  (asdf:system-relative-pathname :caveman2-example #P"app.lisp"))
 
 (defvar *handler* nil)
 

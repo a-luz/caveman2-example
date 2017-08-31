@@ -1,9 +1,9 @@
 (in-package :cl-user)
-(defpackage estudo-cave-asd
+(defpackage caveman2-example-asd
   (:use :cl :asdf))
-(in-package :estudo-cave-asd)
+(in-package :caveman2-example-asd)
 
-(defsystem estudo-cave
+(defsystem caveman2-example
   :version "0.1"
   :author "Arthur Luz"
   :license ""
@@ -25,7 +25,6 @@
                ;; for other tasks
                :drakma
                :cl-json
-               :split-sequence
                :md5)
   :components ((:module "src"
                 :components
@@ -35,4 +34,4 @@
                  (:file "db" :depends-on ("config"))
                  (:file "config"))))
   :description ""
-  :in-order-to ((test-op (load-op estudo-cave-test))))
+  :in-order-to ((test-op (load-op caveman2-example-test))))

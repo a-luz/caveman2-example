@@ -1,7 +1,7 @@
 (in-package :cl-user)
-(defpackage estudo-cave.view
+(defpackage caveman2-example.view
   (:use :cl)
-  (:import-from :estudo-cave.config
+  (:import-from :caveman2-example.config
                 :*template-directory*)
   (:import-from :caveman2
                 :*response*
@@ -15,7 +15,7 @@
                 :encode-json)
   (:export :render
            :render-json))
-(in-package :estudo-cave.view)
+(in-package :caveman2-example.view)
 
 (djula:add-template-directory *template-directory*)
 
@@ -38,9 +38,9 @@
 ;;
 ;; Execute package definition
 
-(defpackage estudo-cave.djula
+(defpackage caveman2-example.djula
   (:use :cl)
-  (:import-from :estudo-cave.config
+  (:import-from :caveman2-example.config
                 :config
                 :appenv
                 :developmentp
@@ -48,4 +48,4 @@
   (:import-from :caveman2
                 :url-for))
 
-(setf djula:*djula-execute-package* (find-package :estudo-cave.djula))
+(setf djula:*djula-execute-package* (find-package :caveman2-example.djula))

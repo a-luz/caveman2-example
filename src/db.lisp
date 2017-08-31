@@ -1,7 +1,7 @@
 (in-package :cl-user)
-(defpackage estudo-cave.db
+(defpackage caveman2-example.db
   (:use :cl)
-  (:import-from :estudo-cave.config
+  (:import-from :caveman2-example.config
                 :config)
   (:import-from :datafly
                 :*connection*)
@@ -10,7 +10,7 @@
   (:export :connection-settings
            :db
            :with-connection))
-(in-package :estudo-cave.db)
+(in-package :caveman2-example.db)
 
 (defun connection-settings (&optional (db :maindb))
   (cdr (assoc db (config :databases))))
