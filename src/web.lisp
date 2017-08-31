@@ -27,8 +27,8 @@
   (render #P"index.html"))
 
 (defroute ("/mult" :method :post) (&key |number|)
-  (let* ((multiplied (* 2 (parse-integer |number|)))
-         (resp  `(,multiplied)))
+  (let* ((multi (* 2 (parse-integer |number|)))
+         (resp  (list multi)))
     (render-json resp)))
 
 ;;
