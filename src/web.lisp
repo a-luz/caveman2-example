@@ -22,11 +22,16 @@
 
 ;;
 ;; Routing rules
-
+;; Routes to the index page
 (defroute "/" ()
+  "Renders the index page template"
   (render #P"index.html"))
 
+;; AJAX routing example
 (defroute ("/mult" :method :post) (&key |number|)
+  "Rceives an object via post (i.e \"{number: 3}\"), multiplies
+   the number by 2 and sends the response back as a JSON object"
+
   (let* ((multi (* 2 (parse-integer |number|)))
          (resp  (list multi)))
     (render-json resp)))
