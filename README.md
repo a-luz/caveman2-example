@@ -1,6 +1,5 @@
 # caveman2-example
 
-This is my study project of the Common Lisp web framework caveman2.  
 I plan on writing a simple and functional web application as soon as I am finished with this study, and then write a full on tutorial on that.  
 In the meanwhile, someone who wants to get started on the caveman2 framework but wants some working example codes on how to do basic stuff with it, can follow this project.  
 
