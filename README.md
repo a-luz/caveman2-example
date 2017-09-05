@@ -4,6 +4,8 @@ This is my study project of the Common Lisp web framework caveman2.
 I plan on writing a simple and functional web application as soon as I am finished with this study, and then write a full on tutorial on that.  
 In the meanwhile, someone who wants to get started on the caveman2 framework but wants some working example codes on how to do basic stuff with it, can follow this project.  
 
+Keep in mind that it's not always the best practice to just jump into a framework and never learn what's behind it. So I would strongly recommend studying the main library behind caveman2, (clack)[https://github.com/fukamachi/clack].
+
 ### Examples I am going to implement in this project:
 - [x] Simple AJAX request;
 - [ ] Database example (CRUD);    
