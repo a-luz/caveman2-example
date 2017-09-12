@@ -12,9 +12,37 @@
   <input type="number" name="num" id="num" />
   <input type="button" onclick="multiplyNum();" name="sub" value="Submit" />
   <div id="result">
-    
   </div>
   <br/>
+  <hr>
+  <h2>Accessing databases</h2>
+  <p>I've created a database in postgresql in which exists a table called usr</p>
+  <p>In this table, there are 4 columns. usrId, usrName, usrEmail and usrPwd</p>
+  <h3>Inserting a user to the database</h3>
+  <form>
+    User name:<br>
+    <input type="text" id="usrName" name="name" placeholder="user name" value="" /><br>
+    User email:<br>
+    <input type="email" id="usrEmail" name="email" placeholder="email" value="" /><br>
+    User password:<br>
+    <input type="password" id="usrPwd" name="password" placeholder="password" value="" /><br>
+    <input type="button" name="submit" value="Insert user!" onclick="insertUser();" /><br>
+  </form>
+  <div id="insert_result">
+  </div>
   <br/>
+  
+  <h3>Retrieving users in the database</h3>
+  <p>Users registered in database:</p>
+  <p>(to refresh the list, refresh the page)</p>
+  <ul>
+    {% for user in users %}
+    <li>user name: {{ user.usrname }}</li>
+    <li>user email: {{ user.usremail }}</li>
+    <br />
+    {% endfor %}
+  </ul>
+  <br />
+  <br />
 </div>
 {% endblock %}
